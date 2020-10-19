@@ -36,7 +36,7 @@
         <legend>Contact Details</legend>
 
         <div class="name-item">
-          <label for="name">Name <em>*</em></label>
+          <label for="name">Full Name <em>*</em></label>
           <input
             type="text"
             id="name"
@@ -47,35 +47,39 @@
           /><br />
         </div>
         <div class="name-item">
-        <label for="telephone">Telephone</label>
-        <input
-          type="tel"
-          id="telephone"
-          placeholder="0712345678"
-          size="10"
-          maxlength="10"
-        /><br />
-      </div>
-      <div class="name-item">
-        <label for="email">Email <em>*</em></label>
-        <input type="email" id="email" placeholder="xyz@mail.com" required />
-      </div>
+          <label for="telephone">Telephone</label>
+          <input
+            type="tel"
+            id="telephone"
+            placeholder="0712345678"
+            size="10"
+            maxlength="10"
+          /><br />
+        </div>
+        <div class="name-item">
+          <label for="email">Email Address <em>*</em></label>
+          <input type="email" id="email" placeholder="xyz@mail.com" required />
+        </div>
       </fieldset>
       <!--Personal Info-->
       <fieldset id="personal">
         <legend>Personal Information</legend>
 
-        <label for="age">Date Of Birth <em>*</em></label>
-        <input type="date" name="" id="" date /><br />
+        <div class="name-item">
+          <label for="age">Date Of Birth <em>*</em></label>
+          <input type="date" name="birth" id="birth" date min="1965-01-01" max="2003-01-01"/><br />
+        </div>
 
+        <div class="name-item">
         <label for="gender">Gender</label>
         <select name="gender" id="gender">
           <option value="empty" selected disabled></option>
           <option value="female">Female</option>
           <option value="male">Male</option>
-          <option value="other">Other</option></select
-        ><br />
+          <option value="other">Other</option></select>
+         </div>
 
+         <div class="name-item">
         <label for="region">Home Region</label>
         <input
           type="text"
@@ -93,10 +97,11 @@
           <option label="North-Eastern" value="North-Eastern"></option>
           <option label="Western" value="Western"></option>
         </datalist>
+      </div>
 
-        <label for="comments"
-          >Tell us about yourself. <em>*</em></label>
-        
+        <div id="about">
+        <label for="comments">Tell us about yourself. <em>*</em></label>
+
         <textarea
           name="comments "
           id="comments"
@@ -108,12 +113,13 @@
           required
           spellcheck="true"
         ></textarea>
+      </div>
       </fieldset>
 
       <!--Qualification-->
       <fieldset id="qualification">
         <legend>Highest Level of Education <em>*</em></legend>
-
+        <div class="radio-items">
         <label for="high-school">High School</label>
         <input
           type="radio"
@@ -125,15 +131,19 @@
         <input type="radio" name="education" id="college" />
         <label for="university">University</label>
         <input type="radio" name="education" id="university" />
+        </div>
       </fieldset>
 
       <!--Upload Resume-->
-      <fieldset>
-        <legend>Upload Your Resume</legend>
-        <input type="file" name="resume" id="resume" />
+      <fieldset id="upload">
+        <legend>Upload Your Resume *</legend>
+        <span class="file-type">Pdf Only.</span><br>
+        <input type="file" name="resume" id="resume" required accept="application/pdf"/>
+        
+
       </fieldset>
 
-      <p><input type="submit" value="Submit" /></p>
+      <p><input type="submit" value="Submit" id="btn"/></p>
     </form>
   </body>
 </html>
