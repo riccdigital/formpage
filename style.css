@@ -110,14 +110,14 @@ label{
     grid-template-rows: 1fr 1fr 1fr;
 }
 
-#name{
+#name, #telephone, #email{
     width: 400px;
     height: 30px;
     border-radius: 5px;
     border: none;
 }
 
-#name::placeholder{
+input::placeholder{
     font-size: 11pt;
     color: red;
     opacity: 0.5;
