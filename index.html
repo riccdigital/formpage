@@ -22,6 +22,7 @@
       </nav>
     </header>
     <form id="applicationForm" action="#" method="POST">
+      <div id="wrapper">
       <h2>Job Application Form Demo</h2>
       <!--Intro-->
       <p class="form-intro">
@@ -136,14 +137,20 @@
 
       <!--Upload Resume-->
       <fieldset id="upload">
-        <legend>Upload Your Resume *</legend>
-        <span class="file-type">Pdf Only.</span><br>
-        <input type="file" name="resume" id="resume" required accept="application/pdf"/>
         
+        <legend>Upload Your Resume *</legend>
+        <div class="upload-item">
+        <span class="file-type">Pdf Only.</span><br>
+        <input type="file" name="resume" id="resume" required accept="application/pdf"/><br>
+      </div>
+      <div class="submit-item">
+        <input type="submit" value="Submit" id="btn"/>
+      </div>
 
       </fieldset>
 
-      <p><input type="submit" value="Submit" id="btn"/></p>
+      
+      </div>
     </form>
   </body>
 </html>

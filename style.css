@@ -59,7 +59,7 @@ a {
   color: red;
 }
 #applicationForm {
-  margin-top: 100px;
+  margin-top: 90px;
   background-image: url(https://i.ibb.co/crDsPrK/notepad-3316997-1920.jpg);
   width: auto;
   background-color: rgba(255, 255, 255, 0.486);
@@ -71,8 +71,14 @@ a {
   padding: 0 5%;
   justify-content: baseline;
   background-color: greenyellow;
-  color: purple;
+  color: black;
   box-shadow: 0px 0px 10px palevioletred !important;
+  
+}
+#wrapper{
+  background-color: greenyellow;
+  opacity: 0.9;
+  border-radius: 10px;
 }
 form h2 {
   margin-top: 2%;
@@ -80,15 +86,14 @@ form h2 {
   font-size: 25pt;
   background-color: greenyellow;
   border-radius: 10px;
-  padding: 1%;
+  padding-left: 1%;
 }
 
 .form-intro {
   display: flex;
-  justify-content: flex-start;
-  
-  
-  padding-bottom: 1%;
+  justify-content: flex-start;  
+  align-items: center;
+  padding-left: 1%;
   background-color: greenyellow;
   border-radius: 10px;
 }
@@ -146,7 +151,22 @@ textarea {
   border-radius: 10px;
 }
 #qualification, #upload{
-  padding: 2%;
+  
+  display: grid;
+  grid-template-rows: 1fr;
+  
+}
+.upload-item{
+  padding-top: 0;
+  
+  order: 1;
+  align-items: center;
+  margin-bottom: 1em;
+}
+.submit-item{
+ 
+  order: 2;
+  align-items: center;
 }
 #btn{
   border: 2px solid red;
@@ -157,9 +177,11 @@ textarea {
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
-  margin: 4px 2px;
+  margin: 2px 2px;
   cursor: pointer;
   border-radius: 10px;
+  width: 20%;
+  
 }
 #btn:hover{
   color: purple;
